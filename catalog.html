@@ -29,7 +29,7 @@
           <li><a href="blank.html">Контакты</a></li>
         </ul>
         <div class="user-navigation">
-          <a href="blank.html">Вход</a>
+          <a class="login-link" href="blank.html">Вход</a>
         </div>
       </div>
     </div>
@@ -49,7 +49,55 @@
 
   <section>
     <h2>Фильтр товаров</h2>
-    <!-- Здесь будет форма фильтра -->
+    <form action="https://echo.htmlacademy.ru" method="get">
+      <fieldset>
+        <legend>Производители:</legend>
+        <ul>
+          <li>
+            <input id="filter-baxter-of-california" type="checkbox" name="baxter-of-california" checked>
+            <label for="filter-baxter-of-california">Baxter of California</label>
+          </li>
+          <li>
+            <input id="filter-mr-natty" type="checkbox" name="mr-natty">
+            <label for="filter-mr-natty">Mr Natty</label>
+          </li>
+          <li>
+            <input id="filter-suavecito" type="checkbox" name="suavecito" checked>
+            <label for="filter-suavecito">Suavecito</label>
+          </li>
+          <li>
+            <input id="filter-malin-goetz" type="checkbox" name="malin-goetz">
+            <label for="filter-malin-goetz">Malin+Goetz</label>
+          </li>
+          <li>
+            <input id="filter-murrays" type="checkbox" name="murrays">
+            <label for="filter-murrays">Murray’s</label>
+          </li>
+          <li>
+            <input id="filter-american-crew" type="checkbox" name="american-crew" checked>
+            <label for="filter-american-crew">American Crew</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Группы товаров:</legend>
+        <ul>
+          <li>
+            <input id="filter-shave" type="radio" name="product-group" value="shaving">
+            <label for="filter-shave">Бритвенные принадлежности</label>
+          </li>
+          <li>
+            <input id="filter-care" type="radio" name="product-group" value="hair-care" checked>
+            <label for="filter-care">Средства для ухода</label>
+          </li>
+          <li>
+            <input id="filter-accessories" type="radio" name="product-group" value="accessories">
+            <label for="filter-accessories">Аксессуары</label>
+          </li>
+        </ul>
+      </fieldset>
+      <button type="submit">Показать</button>
+    </form>
   </section>
 
   <section>
@@ -128,6 +176,7 @@
       <li><a class="social-button" href="#">Инстаграм</a></li>
     </ul>
   </section>
+
   <p class="footer-copyright">
     Разработано:
     <a class="button" href="http://htmlacademy.ru">HTML Academy</a>
@@ -135,11 +184,28 @@
 
 </footer>
 
-<section>
+<section class="modal modal-login">
   <h2>Личный кабинет</h2>
-  <p>Введите пожалуйста свой логин и пароль</p>
-  <!-- Здесь будет форма логина -->
-  <button type="button">Закрыть</button>
+  <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
+  <form action="https://echo.htmlacademy.ru" method="post">
+    <p>
+      <label for="login-login">Логин</label>
+      <input id="login-login" type="email" name="login" placeholder="email@exampel.com">
+    </p>
+    <p>
+      <label for="login-password">Пароль</label>
+      <input id="login-password" type="password" name="password" placeholder="••••••••">
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="remember" checked>
+        Запомните меня
+      </label>
+      <a href="#">Я забыл пароль!</a>
+    </p>
+    <button type="submit">Войти</button>
+  </form>
+  <button class="modal-close" type="button">Закрыть</button>
 </section>
 
 </body>

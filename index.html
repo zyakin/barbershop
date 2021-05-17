@@ -78,7 +78,9 @@
     <section class="gallery">
       <h2>Фотогалерея</h2>
       <figure class="gallery-content">
-        <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
+        <a href="#">
+          <img src="img/studio.jpg" width="286" height="164" alt="Интерьер">
+        </a>
       </figure>
       <button class="button gallery-button gallery-button-back" type="button" disabled>Назад</button>
       <button class="button gallery-button gallery-button-next" type="button">Вперед</button>
@@ -105,7 +107,29 @@
   <section class="appointment">
     <h2>Записаться</h2>
     <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для для подтверждения брони</p>
-    <!-- Здесь будет форма записи -->
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label>
+          Дата
+          <input type="date" name="date" value="2021-05-16">
+        </label>
+        <label>
+          Время
+          <input type="time" name="time" value="10:00">
+        </label>
+      </p>
+      <p>
+        <label>
+          Ваше имя
+          <input type="text" name="username" placeholder="Борода">
+        </label>
+        <label>
+          Ваше имя
+          <input type="tel" name="phone" placeholder="+7 123 456-78-90">
+        </label>
+      </p>
+      <button type="submit">Отправить</button>
+    </form>
   </section>
 
 </main>
@@ -130,6 +154,7 @@
       <li><a class="social-button" href="#">Инстаграм</a></li>
     </ul>
   </section>
+  
   <p class="footer-copyright">
     Разработано:
     <a class="button" href="http://htmlacademy.ru">HTML Academy</a>
@@ -140,7 +165,24 @@
 <section class="modal modal-login">
   <h2>Личный кабинет</h2>
   <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
-  <!-- Здесь будет форма логина -->
+  <form action="https://echo.htmlacademy.ru" method="post">
+    <p>
+      <label for="login-login">Логин</label>
+      <input id="login-login" type="email" name="login" placeholder="email@exampel.com">
+    </p>
+    <p>
+      <label for="login-password">Пароль</label>
+      <input id="login-password" type="password" name="password" placeholder="••••••••">
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="remember" checked>
+        Запомните меня
+      </label>
+      <a href="#">Я забыл пароль!</a>
+    </p>
+    <button type="submit">Войти</button>
+  </form>
   <button class="modal-close" type="button">Закрыть</button>
 </section>
 
